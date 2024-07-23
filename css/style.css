@@ -1,0 +1,65 @@
+body {
+  background: url(../images/wraper.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  background-attachment: fixed;
+  background-color: #272b30;
+}
+
+header nav.navbar {
+  background-color: #3a497b !important;
+  position: sticky;
+}
+
+header nav.navbar a {
+  color: #fff;
+}
+
+.active {
+  color: rgb(150, 126, 255) !important;
+}
+
+.card {
+  transition: all 0.5s;
+}
+.card:hover {
+  transform: scale(0.9);
+}
+
+.loding {
+  background-color: #063e72;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5555;
+  transition: all 1s;
+}
+
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  --g: conic-gradient(from -90deg at 10px 10px, #fff 90deg, #0000 0);
+  background: var(--g), var(--g), var(--g);
+  background-size: 50% 50%;
+  animation: l18 1s infinite;
+}
+@keyframes l18 {
+  0% {
+    background-position: 0 0, 10px 10px, 20px 20px;
+  }
+  33% {
+    background-position: -30px 0, 10px 10px, 20px 20px;
+  }
+  66% {
+    background-position: -30px 0, 10px 40px, 20px 20px;
+  }
+  100% {
+    background-position: -30px 0, 10px 40px, 50px 20px;
+  }
+}
